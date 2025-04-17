@@ -41,9 +41,9 @@ Decrypt Data 🔓
 Each script can be used to decrypt data from a file using the specified AES mode. You can run the scripts from the command line by specifying the input file and the decryption password.
 
 ```bash
-python3 AES-256-CBC.py --input <input_file> --password <your_password>
+python3 AES-256-<mode>.py --input <input_file> --password <your_password>
 ```
-Replace <input_file> with the path to the file you wish to decrypt, and <your_password> with the password used to encrypt the data.
+Replace <mode> with the mode of encryption, <input_file> with the path to the file you wish to decrypt, and <your_password> with the password used to encrypt the data.
 
 Encrypt Data 🔒
 The encryption scripts can also be used by specifying the encryption mode (e.g., --mode ctr for AES-CTR). You can use the following command to encrypt data:
