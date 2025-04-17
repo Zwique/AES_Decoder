@@ -1,3 +1,4 @@
+import argparse
 from Crypto.Cipher import AES
 from Crypto.Hash import MD5
 import base64
@@ -24,11 +25,20 @@ def decrypt_openssl(enc_data, password):
         pt = pt[:-pad_len]
     return pt
 
-# Read and decrypt
-with open("encrypted.txt", "rb") as f:
-    data = f.read()
+def main():
+    # Set up argument parsing
+    parser = argparse.ArgumentParser(description="Decrypt AES-256-CBC encrypted data.")
+    parser.add_argument('--input', type=str, required=True, help="Path to the encrypted file.")
+    parser.add_argument('--password', type=str, required=True, help="Password for decryption.")
+    args = parser.parse_args()
 
-password = input("Enter password: ")
-plaintext = decrypt_openssl(data, password)
-print("Decrypted message:")
-print(plaintext.decode(errors="replace"))
+    # Read and decrypt the file
+    with open(args.input, "rb") as f:
+        data = f.read()
+
+    plaintext = decrypt_openssl(data, args.password)
+    print("Decrypted message:")
+    print(plaintext.decode(errors="replace"))
+
+if __name__ == "__main__":
+    main()
