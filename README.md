@@ -49,7 +49,7 @@ Encrypt Data 🔒
 The encryption scripts can also be used by specifying the encryption mode (e.g., --mode ctr for AES-CTR). You can use the following command to encrypt data:
 
 ```bash
-python3 AES-256-CBC.py --input <input_file> --password <your_password> --mode <encryption_mode> --output <output_file>
+python3 encryption.py --input <input_file> --password <your_password> --mode <encryption_mode> --output <output_file>
 Command-Line Arguments 📝
 --input (required): Path to the input file for encryption or decryption.
 
@@ -62,7 +62,7 @@ Command-Line Arguments 📝
 
 Example 🎯
 ```bash
-python3 AES-256-CBC.py --input data.enc --password "yourPassword123" --output decrypted_data.txt
+python3 encryption.py --input secret.txt  --password "supersecretpasswd" --mode ctr -- output data.enc
 ```
 Contributing 🤝
 Feel free to fork this repository and submit pull requests for improvements, bug fixes, or additional AES modes. All contributions are welcome! 😊
