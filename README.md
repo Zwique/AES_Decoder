@@ -65,5 +65,6 @@ Example 🎯
 python3 encryption.py --input secret.txt  --password "supersecretpasswd" --mode ctr -- output data.enc
 ```
 Contributing 🤝
-Feel free to fork this repository and submit pull requests for improvements, bug fixes, or additional AES modes. All contributions are welcome! 😊
 
+<table><tr><td> <br> Feel free to fork this repository and submit pull requests for improvements, bug fixes, or additional AES modes. <br> </td></tr></table>
+ All contributions are welcome! 😊
